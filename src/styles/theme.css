@@ -1,0 +1,162 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Splites Color System */
+  --page-base: #FAFAF8;
+  --surface: #F3F2EE;
+  --card-bg: #FFFFFF;
+  --ink: #1A1A1A;
+  --body-text: #555555;
+  --muted-text: #888888;
+  --hint-text: #AAAAAA;
+  --border-color: #E5E3DC;
+  --accent-green: #2E7D5E;
+  --green-bg-tint: #E8F5EF;
+  --green-text-dark: #1A5C42;
+  --red-tint-bg: #FEF0EF;
+  --red-text: #C0392B;
+  --amber-tint-bg: #FDF3E3;
+  --amber-text: #92600A;
+  --dark-cta: #1A1A1A;
+
+  /* Legacy theme tokens for compatibility */
+  --font-size: 16px;
+  --background: #FAFAF8;
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+  --primary: #2E7D5E;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F3F2EE;
+  --secondary-foreground: #1A1A1A;
+  --muted: #F3F2EE;
+  --muted-foreground: #888888;
+  --accent: #E8F5EF;
+  --accent-foreground: #1A5C42;
+  --destructive: #C0392B;
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E3DC;
+  --input: transparent;
+  --input-background: #F3F2EE;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #2E7D5E;
+  --chart-1: #2E7D5E;
+  --chart-2: #1565C0;
+  --chart-3: #6A1B9A;
+  --chart-4: #F59E0B;
+  --chart-5: #C0392B;
+  --radius: 0.75rem;
+  --sidebar: #FAFAF8;
+  --sidebar-foreground: #1A1A1A;
+  --sidebar-primary: #2E7D5E;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F3F2EE;
+  --sidebar-accent-foreground: #1A1A1A;
+  --sidebar-border: #E5E3DC;
+  --sidebar-ring: #2E7D5E;
+}
+
+.dark {
+  --background: #1A1A1A;
+  --foreground: #FAFAF8;
+  --card: #1A1A1A;
+  --card-foreground: #FAFAF8;
+  --popover: #1A1A1A;
+  --popover-foreground: #FAFAF8;
+  --primary: #2E7D5E;
+  --primary-foreground: #FFFFFF;
+  --secondary: #555555;
+  --secondary-foreground: #FAFAF8;
+  --muted: #555555;
+  --muted-foreground: #888888;
+  --accent: #1A5C42;
+  --accent-foreground: #E8F5EF;
+  --destructive: #C0392B;
+  --destructive-foreground: #FFFFFF;
+  --border: #555555;
+  --input: #555555;
+  --ring: #2E7D5E;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #2E7D5E;
+  --chart-2: #1565C0;
+  --chart-3: #6A1B9A;
+  --chart-4: #F59E0B;
+  --chart-5: #C0392B;
+  --sidebar: #1A1A1A;
+  --sidebar-foreground: #FAFAF8;
+  --sidebar-primary: #2E7D5E;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #555555;
+  --sidebar-accent-foreground: #FAFAF8;
+  --sidebar-border: #555555;
+  --sidebar-ring: #2E7D5E;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-[#FAFAF8] text-[#1A1A1A];
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  /* Reset default typography - we'll use inline styles for Splites-specific sizing */
+  h1, h2, h3, h4, h5, h6, p, label, button, input {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+  }
+}

@@ -70,7 +70,7 @@ export default function Hero() {
                 padding: '14px 32px',
                 borderRadius: '8px',
                 background: '#1A1A1A',
-                color: 'white',
+                color: 'red',
                 border: 'none',
                 cursor: 'pointer',
                 whiteSpace: 'nowrap',
